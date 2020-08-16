@@ -1,0 +1,73 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slick__slider__container{
+  margin: auto;
+  overflow: hidden; 
+  position: relative;
+}
+
+.slick__slider{
+  display: flex;
+  transition: all ease-out .5s;
+}
+
+.slick__slide{
+  min-width: 100%;
+  position: relative;
+}
+  
+
+.slick__slider__dots{
+  display: flex;
+  justify-content: center;
+  margin-top: .2rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slick__slider__prev{
+  position: absolute;
+  left: 5px;
+  top: 0;
+}
+.slick__slider__next{
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+
+.slick__slider__prev, .slick__slider__next{
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  color: #ccc;
+  height: 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.slick__slider__dots li {
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 0 0.3rem;
+  align-items: center;
+  cursor: pointer;
+}
+.slick__slider__dots li.active::after{
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+}
